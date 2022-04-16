@@ -16,13 +16,15 @@ export default function Home() {
 
       <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight">
         <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear">
-          <Image
-            src="/images/index.png"
-            height={35}
-            width={35}
-            alt="Home Image"
-            layout="fixed"
-          />
+          <Link href="/">
+            <Image
+              src="/images/index.png"
+              height={35}
+              width={35}
+              alt="Home Image"
+              layout="fixed"
+            />
+          </Link>
         </div>
         <nav className="p-1">
           <Link href="/write/writeHome">
@@ -35,17 +37,7 @@ export default function Home() {
       </header>
 
       <main className="table:w-headerWidth mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
-        <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold">
-          Hi, I{"' "}m PengPengQ
-        </h1>
-        <article className="mt-5 table:text-xl sm:text-lg text-base table:w-590 sm:w-506 phone:w-450 w-380 mx-auto decoration-slate-300 font-sans">
-          <p className="text-center">
-            I{"' "}m a web software engineer👨‍💻 from Chengdu, China🇨🇳. I
-            currently enjoy my last college days🎓. Writing an excellent open
-            source project👨‍💻 is my goal💪. So, I improve my skills everyday🎉.
-            If you are interested in me, welcome to follow🌟 me.
-          </p>
-        </article>
+        <div>About Me Page</div>
       </main>
 
       <footer></footer>
