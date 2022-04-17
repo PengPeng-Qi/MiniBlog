@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 dark:bg-zinc-900 text-black dark:text-white">
+    <div className="bg-slate-400 dark:bg-neutral-900 text-black dark:text-white">
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight">
+      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight font-sans sm:bg-inherit bg-zinc-900">
         <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear">
           <Image
             src="/images/index.png"
@@ -25,18 +25,25 @@ export default function Home() {
           />
         </div>
         <nav className="p-1">
+          <Link href="/">
+            <a className="px-2 mr-4 hover:underline underline-offset-4">Home</a>
+          </Link>
           <Link href="/write/writeHome">
-            <a className="px-2 hover:underline underline-offset-4">Writing</a>
+            <a className="px-2 mr-4 hover:underline underline-offset-4">
+              Writing
+            </a>
           </Link>
           <Link href="/about/aboutHome">
-            <a className="px-2 hover:underline underline-offset-4">About</a>
+            <a className="px-2 mr-4 hover:underline underline-offset-4">
+              About
+            </a>
           </Link>{" "}
         </nav>
       </header>
 
       <main className="table:w-headerWidth mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
         <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold">
-          Hi, I{"' "}m PengPengQ
+          Hi, I’m PengPengQ!
         </h1>
         <article className="mt-5 table:text-xl sm:text-lg text-base table:w-590 sm:w-506 phone:w-450 w-380 mx-auto decoration-slate-300 font-sans">
           <p className="text-center">

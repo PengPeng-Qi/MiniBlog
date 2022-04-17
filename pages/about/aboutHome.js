@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 dark:bg-zinc-900 text-black dark:text-white">
+    <div className="bg-slate-400 dark:bg-neutral-900 text-black dark:text-white">
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -14,24 +14,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight">
+      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight font-sans sm:bg-inherit bg-zinc-900">
         <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear">
-          <Link href="/">
-            <Image
-              src="/images/index.png"
-              height={35}
-              width={35}
-              alt="Home Image"
-              layout="fixed"
-            />
-          </Link>
+          <Image
+            src="/images/index.png"
+            height={35}
+            width={35}
+            alt="Home Image"
+            layout="fixed"
+          />
         </div>
         <nav className="p-1">
+          <Link href="/">
+            <a className="px-2 mr-4 hover:underline underline-offset-4">Home</a>
+          </Link>
           <Link href="/write/writeHome">
-            <a className="px-2 hover:underline underline-offset-4">Writing</a>
+            <a className="px-2 mr-4 hover:underline underline-offset-4">
+              Writing
+            </a>
           </Link>
           <Link href="/about/aboutHome">
-            <a className="px-2 hover:underline underline-offset-4">About</a>
+            <a className="px-2 mr-4 hover:underline underline-offset-4">
+              About
+            </a>
           </Link>{" "}
         </nav>
       </header>
