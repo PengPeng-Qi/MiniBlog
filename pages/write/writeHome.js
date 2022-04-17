@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base table:text-lg h-headerHeight font-sans sm:bg-inherit bg-zinc-900">
-        <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear">
+        <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear relative">
           <Image
             src="/images/index.png"
             height={35}
@@ -23,6 +23,9 @@ export default function Home() {
             alt="Home Image"
             layout="fixed"
           />
+          <Link href="/">
+            <div className="w-9 h-9 absolute top-0 z-20"> </div>
+          </Link>
         </div>
         <nav className="p-1">
           <Link href="/">
