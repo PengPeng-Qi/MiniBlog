@@ -47,10 +47,10 @@ export default function Home() {
         </h1>
         <article className="mt-5 table:text-xl sm:text-lg text-base table:w-590 sm:w-506 phone:w-450 w-380 mx-auto decoration-slate-300 font-sans">
           <p className="text-center">
-            I{"' "}m a web software engineer👨‍💻 from Chengdu, China🇨🇳. I
-            currently enjoy my last college days🎓. Writing an excellent open
-            source project👨‍💻 is my goal💪. So, I improve my skills everyday🎉.
-            If you are interested in me, welcome to follow🌟 me.
+            I’m a web software engineer from Chengdu, China. I currently enjoy
+            my last college days. Writing an excellent open source project is my
+            goal. So, I improve my skills everyday. If you are interested in me,
+            welcome to follow me.
           </p>
         </article>
       </main>
