@@ -25,6 +25,12 @@ module.exports = {
         desktop: "1280px",
       },
       fontSize: {
+        "1.1textxl": [
+          "21px",
+          {
+            lineHeight: "31.5px",
+          },
+        ],
         "4.5xl": [
           "40px",
           {
