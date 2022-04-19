@@ -20,6 +20,9 @@ module.exports = {
         660: "660px",
         headerHeight: "62px",
       },
+      lineHeight: {
+        7.5: "30px",
+      },
       screens: {
         phone: "450px",
         table: "976px",
