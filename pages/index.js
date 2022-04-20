@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className="table:w-headerWidth mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
-        <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold">
+        <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold tracking-wide font-headFont">
           Hi, I’m PengPengQ!
         </h1>
         <article className="mt-5 table:text-1.1textxl sm:text-lg text-base table:w-590 sm:w-506 phone:w-450 w-380 mx-auto font-sans font-light text-gray-800 dark:text-gray-300">

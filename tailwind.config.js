@@ -28,6 +28,9 @@ module.exports = {
         table: "976px",
         desktop: "1280px",
       },
+      fontFamily: {
+        headFont: ["Crimson Pro", "serif"],
+      },
       fontSize: {
         "1.1textxl": [
           "21px",
