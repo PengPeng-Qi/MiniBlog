@@ -3,7 +3,7 @@ import Header from "../components/header";
 
 export default function Home() {
   return (
-    <div className="dark:bg-neutral-900 text-black dark:text-white">
+    <div className="bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white">
       <Head>
         <title>碰碰漆的博客</title>
         <meta
