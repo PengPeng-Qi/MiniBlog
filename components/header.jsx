@@ -14,7 +14,7 @@ const logo = (
 
 const header = () => {
   return(
-      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base leading-7.5 table:text-lg h-headerHeight font-sans sm:bg-inherit dark:bg-zinc-900">
+      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base leading-7.5 table:text-lg h-headerHeight font-sans sm:bg-inherit dark:bg-neutral-900">
         <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear relative ml-2">
           {logo}
           <Link href="/">
