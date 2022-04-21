@@ -45,6 +45,10 @@ module.exports = {
           },
         ],
       },
+      strokeWidth: {
+        14: "14px",
+        16: "16px",
+      },
     },
     plugins: [],
   },
