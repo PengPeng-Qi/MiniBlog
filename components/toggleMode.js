@@ -34,11 +34,16 @@ const ThemeChanger = () => {
 
   // 获取系统是否是dark mode
   useEffect(() => {
-    setTheme(
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-    );
+    if (localStorage.getItem("theme")) {
+      setTheme(localStorage.getItem("theme"));
+    } else {
+      setTheme(
+        // prefers-color-scheme 检测用户是否有将系统的主题色设置为亮色或者暗色
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+      );
+    }
   }, []);
 
   const [svg, setSvg] = useState();
@@ -46,12 +51,12 @@ const ThemeChanger = () => {
     theme === "dark" ? setSvg(sun) : setSvg(moon);
   });
 
+  const changeMode = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <button
-      type="button"
-      className="px-2 mr-4"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-    >
+    <button type="button" className="px-2 mr-4" onClick={changeMode}>
       {svg}
     </button>
   );
