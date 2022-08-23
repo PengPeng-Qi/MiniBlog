@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="table:w-headerWidth mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
+      <main className="table:w-976 mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
         <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold tracking-wide font-headFont">
           Hi, I&#39;m PengPengQ!
         </h1>
@@ -21,9 +21,8 @@ export default function Home() {
           <p className="text-center">
             I&#39;m a <strong>web software engineer</strong> from Chengdu,
             China.
-            <br />I currently working in the JD. Writing an excellent
-            open source project is mygoal. So, I improve my skills everyday.{" "}
-            <br />
+            <br />I currently working in the JD. Writing an excellent open
+            source project is mygoal. So, I improve my skills everyday. <br />
             <br />
             If you are interested in me, welcome to follow me.
           </p>

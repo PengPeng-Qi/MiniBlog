@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Header />
 
-      <main className="table:w-headerWidth mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
+      <main className="table:w-976 mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
         <div>About Me Page</div>
       </main>
 

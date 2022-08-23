@@ -13,28 +13,51 @@ const logo = (
 )
 
 const header = () => {
+  const linkItemsData = [
+    { url: '/' , msg: 'Home'},
+    { url: '/write/writeHome' , msg: 'Writing'},
+    { url: '/about/aboutHome' , msg: 'About'},
+  ]
+  const linkItems = linkItemsData.map((item, index) => {
+    return (
+      <Link href={item.url} key={index}>
+        <span className="px-2 mr-4 hover:underline underline-offset-4">
+          {item.msg}
+        </span>
+      </Link>
+    )
+  })
   return(
-      <header className="flex content-center justify-between table:w-headerWidth mx-auto py-3 text-base leading-7.5 table:text-lg h-headerHeight font-sans sm:bg-inherit dark:bg-neutral-900">
-        <div className="hover:scale-110 hover:duration-200 duration-200 hover:ease-linear ease-linear relative ml-2">
+      <header className="
+      dark:bg-neutral-900
+        table:w-976
+        table:text-lg
+        text-base
+        leading-7.5
+        flex
+        content-center
+        justify-between
+        mx-auto
+        py-3
+        h-62
+        font-sans
+      ">
+        <div className="
+          hover:scale-110
+          hover:duration-200
+          hover:ease-linear
+          duration-200
+          ease-linear
+          relative
+          ml-2
+        ">
           {logo}
           <Link href="/">
             <div className="w-9 h-9 absolute top-0 z-20"> </div>
           </Link>
         </div>
-        <nav className="p-1 flex">
-          <Link href="/">
-            <a className="px-2 mr-4 hover:underline underline-offset-4">Home</a>
-          </Link>
-          <Link href="/write/writeHome">
-            <a className="px-2 mr-4 hover:underline underline-offset-4">
-              Writing
-            </a>
-          </Link>
-          <Link href="/about/aboutHome">
-            <a className="px-2 mr-4 hover:underline underline-offset-4">
-              About
-            </a>
-          </Link>
+        <nav className="flex p-1">
+          {linkItems}
           <ToggleMode />
         </nav>
       </header>

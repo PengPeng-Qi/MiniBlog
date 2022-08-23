@@ -7,18 +7,18 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        headerWidth: "976px",
         380: "380px",
         450: "450px",
         506: "506px",
         590: "590px",
+        976: "976px",
       },
       height: {
+        62: "62px",
         367: "367px",
         407: "407px",
         560: "560px",
         660: "660px",
-        headerHeight: "62px",
       },
       lineHeight: {
         7.5: "30px",
