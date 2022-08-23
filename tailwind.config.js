@@ -45,9 +45,9 @@ module.exports = {
           },
         ],
       },
+      // svg width
       strokeWidth: {
         14: "14px",
-        16: "16px",
       },
     },
     plugins: [],

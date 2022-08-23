@@ -3,7 +3,13 @@ import Header from "../../components/header";
 
 export default function Home() {
   return (
-    <div className="dark:bg-neutral-900 text-black dark:text-white">
+    <div
+      className="
+      dark:bg-neutral-900
+      dark:text-white
+      bg-neutral-50
+      text-black"
+    >
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -14,8 +20,19 @@ export default function Home() {
       </Head>
       <Header />
 
-      <main className="table:w-976 mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
-        <div>Write Pages</div>
+      <main
+        className="
+          desktop:h-660
+          table:h-560
+          table:w-976
+          table:py-40
+          sm:h-407
+          sm:py-24
+          h-367
+          py-20
+          mx-auto"
+      >
+        <div className="text-center">Write Pages</div>
       </main>
 
       <footer></footer>
