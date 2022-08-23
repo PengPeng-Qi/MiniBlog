@@ -3,7 +3,13 @@ import Header from "../components/header";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white">
+    <div
+      className="
+      dark:bg-neutral-900
+      dark:text-white
+      bg-neutral-50
+      text-black"
+    >
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -13,16 +19,53 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="table:w-976 mx-auto py-20  table:py-40 sm:py-24 h-367 sm:h-407 table:h-560 desktop:h-660">
-        <h1 className="table:text-6xl sm:text-4.5xl text-3xl mb-9 text-center font-bold tracking-wide font-headFont">
+      <main
+        className="
+          desktop:h-660
+          table:w-976
+          table:py-40
+          table:h-560
+          sm:py-24
+          sm:h-407
+          h-367
+          py-20
+          mx-auto"
+      >
+        <h1
+          className="
+            table:text-6xl
+            sm:text-4.5xl
+            text-3xl
+            mb-9
+            text-center
+            tracking-wide
+            font-headFont"
+        >
           Hi, I&#39;m PengPengQ!
         </h1>
-        <article className="mt-5 table:text-1.1textxl sm:text-lg text-base table:w-590 sm:w-506 phone:w-450 w-380 mx-auto font-sans font-light text-gray-800 dark:text-gray-300">
+        <article
+          className="
+          dark:text-gray-300
+            table:text-1.1xl
+            table:w-590
+            phone:w-450
+            sm:w-506
+            sm:text-lg
+            text-base
+            w-380
+            mx-auto
+            font-sans
+            font-light
+          text-gray-800"
+        >
           <p className="text-center">
-            I&#39;m a <strong>web software engineer</strong> from Chengdu,
+            <strong>web software engineer</strong> from Chengdu,
             China.
-            <br />I currently working in the JD. Writing an excellent open
-            source project is mygoal. So, I improve my skills everyday. <br />
+            <br />
+            Writing an excellent opensource project is mygoal.
+            <br />
+            So, I improve my skills everyday.
+            <br />
             <br />
             If you are interested in me, welcome to follow me.
           </p>

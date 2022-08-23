@@ -32,7 +32,7 @@ module.exports = {
         headFont: ["Crimson Pro", "serif"],
       },
       fontSize: {
-        "1.1textxl": [
+        "1.1xl": [
           "21px",
           {
             lineHeight: "31.5px",
