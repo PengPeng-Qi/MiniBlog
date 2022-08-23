@@ -8,7 +8,7 @@ export default function Home() {
         <title>碰碰漆的博客</title>
         <meta
           name="description"
-          content="Blog 博客 个人博客 PengPengQ 碰碰漆"
+          content="Blog 博客 个人博客 PengPengQ 碰碰漆 漆鹏的博客 碰碰漆的博客"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
