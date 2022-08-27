@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../../components/header";
-import Layout from "../../components/layout";
+import Card from "../../components/card";
 import { getSortedPostsData } from "../../lib/posts";
 
 export async function getStaticProps() {
@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
       className="
       dark:bg-neutral-900
       dark:text-white
-      bg-neutral-50
+      bg-slate-100
       text-black"
     >
       <Head>
@@ -34,21 +34,36 @@ export default function Home({ allPostsData }) {
 
       <main
         className="
-          desktop:h-660
-          table:h-560
+          desktop:min-h-660
+          table:min-h-560
           table:w-976
-          table:py-40
-          sm:h-407
-          sm:py-24
-          h-367
-          py-20
-          mx-auto"
+          table:py-24
+          table:mx-auto
+          sm:min-h-407
+          sm:py-16
+          min-h-367
+          mx-6
+          py-12"
       >
-        <div className="flex justify-between">
+        <h1
+          className="
+            desktop:px-8
+            desktop:text-3xl
+            table:px-12
+            table:text-2.5xl
+            table:h-12
+            phone:px-4
+            phone:text-2xl
+            font-bold
+            h-10"
+        >
+          Last Content
+        </h1>
+        <main className="flex justify-around flex-wrap">
           {allPostsData.map((PostsData) => (
-            <Layout PostsData={PostsData} key={PostsData.id} />
+            <Card PostsData={PostsData} key={PostsData.id} />
           ))}
-        </div>
+        </main>
       </main>
 
       <footer></footer>

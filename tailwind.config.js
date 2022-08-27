@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       width: {
         380: "380px",
+        420: "420px",
         450: "450px",
         506: "506px",
         590: "590px",
@@ -15,6 +16,12 @@ module.exports = {
       },
       height: {
         62: "62px",
+        367: "367px",
+        407: "407px",
+        560: "560px",
+        660: "660px",
+      },
+      minHeight: {
         367: "367px",
         407: "407px",
         560: "560px",
@@ -35,7 +42,13 @@ module.exports = {
         "1.1xl": [
           "21px",
           {
-            lineHeight: "31.5px",
+            lineHeight: "31.496px",
+          },
+        ],
+        "2.5xl": [
+          "27px",
+          {
+            lineHeight: "34px",
           },
         ],
         "4.5xl": [
@@ -44,6 +57,10 @@ module.exports = {
             lineHeight: "40px",
           },
         ],
+      },
+      colors: {
+        "card-blue": "hsl(210deg, 15%, 15%)",
+        "card-blue_hover": "hsl(210deg, 15%, 25%)",
       },
       // svg width
       strokeWidth: {
