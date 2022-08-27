@@ -1,7 +1,19 @@
 import Head from "next/head";
 import Header from "../../components/header";
+import Layout from "../../components/layout";
+import { getSortedPostsData } from "../../lib/posts";
 
-export default function Home() {
+export async function getStaticProps() {
+  // get id, data, title item
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
   return (
     <div
       className="
@@ -32,7 +44,11 @@ export default function Home() {
           py-20
           mx-auto"
       >
-        <div className="text-center">Write Pages</div>
+        <div className="flex justify-between">
+          {allPostsData.map((PostsData) => (
+            <Layout PostsData={PostsData} key={PostsData.id} />
+          ))}
+        </div>
       </main>
 
       <footer></footer>

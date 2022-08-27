@@ -15,8 +15,8 @@ const logo = (
 const header = () => {
   const linkItemsData = [
     { url: '/' , msg: 'Home'},
-    { url: '/write/writeHome' , msg: 'Writing'},
-    { url: '/about/aboutHome' , msg: 'About'},
+    { url: '/write/' , msg: 'Writing'},
+    { url: '/about/' , msg: 'About'},
   ]
   const linkItems = linkItemsData.map((item, index) => {
     return (
