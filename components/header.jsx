@@ -1,5 +1,14 @@
 import Link from "next/link";
 import ToggleMode from './toggleMode';
+import styled from "styled-components";
+
+const LogoLink = styled.div`
+  position: absolute;
+  top: 0px;
+  width: 2.25rem;
+  height: 2.25rem;
+  z-index: 20;
+`
 
 const logo = (
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.84 298.68"  className="h-8 w-8 fill-transparent stroke-gray-800 dark:stroke-gray-200 stroke-14">
@@ -53,7 +62,7 @@ const header = () => {
         ">
           {logo}
           <Link href="/">
-            <div className="w-9 h-9 absolute top-0 z-20"> </div>
+            <LogoLink />
           </Link>
         </div>
         <nav className="flex p-1">

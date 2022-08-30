@@ -1,5 +1,12 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
+
+const Button = styled.button`
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 1rem;
+`
 
 let moon = (
   <svg
@@ -56,9 +63,9 @@ const ThemeChanger = () => {
   };
 
   return (
-    <button type="button" className="px-2 mr-4" onClick={changeMode}>
+    <Button type="button" onClick={changeMode}>
       {svg}
-    </button>
+    </Button>
   );
 };
 
