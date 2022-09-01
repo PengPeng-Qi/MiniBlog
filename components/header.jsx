@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ToggleMode from './toggleMode';
+// import ToggleMode from './toggleMode';
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -72,7 +72,7 @@ const Logo = styled.svg`
 `
 
 const logo = (
-  <Logo xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.84 298.68"  className="dark:stroke-gray-200">
+  <Logo xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.84 298.68">
     <polyline points="8.62 109.57 8.62 116.46 8.62 146.96 289.84 146.96 289.84 101.22 220.38 101.22" />
     <path d="M339.14,347.22l58.65,1.29V321l-58.31,2.26Z" transform="translate(-296.56 -235.55)" />
     <path d="M517.19,336.71a113.33,113.33,0,0,0-8.14-30.54,110.45,110.45,0,0,0-16.67-27.57,101.26,101.26,0,0,0-17.17-16.17,113.44,113.44,0,0,0-20-11.47c-20.16-8.67-55.1-11.91-89,2.5-9.35,4-25,10.84-39,26.84-5,5.76-21.54,25.2-22.59,53.08a75.23,75.23,0,0,0,.58,12.46" transform="translate(-296.56 -235.55)" />
@@ -98,10 +98,8 @@ const header = () => {
     )
   })
   return(
-      <Header className="dark:bg-neutral-900">
-        <LinkDiv className="
-          hover:scale-110
-        ">
+      <Header>
+        <LinkDiv>
           {logo}
           <Link href="/">
             <LinkLogo />
@@ -109,7 +107,7 @@ const header = () => {
         </LinkDiv>
         <LinkNav>
           {linkItems}
-          <ToggleMode />
+          {/* <ToggleMode /> */}
         </LinkNav>
       </Header>
   )

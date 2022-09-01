@@ -26,13 +26,7 @@ const Main = styled.main`
 
 export default function Post({ postData }) {
   return (
-    <div
-      className="
-      dark:bg-neutral-900
-      dark:text-white
-      bg-neutral-50
-      text-black"
-    >
+    <div>
       <Head>
         <title>{postData.title}</title>
       </Head>

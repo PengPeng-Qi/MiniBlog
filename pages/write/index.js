@@ -62,13 +62,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <div
-      className="
-      dark:bg-neutral-900
-      dark:text-white
-      bg-slate-100
-      text-black"
-    >
+    <div>
       <Head>
         <title>碰碰漆的博客</title>
         <meta

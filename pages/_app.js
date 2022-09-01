@@ -1,9 +1,13 @@
 import "../styles/globals.css";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  main: "red",
+};
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider theme={theme}>
       <Component {...pageProps} />
     </ThemeProvider>
   );

@@ -60,15 +60,13 @@ const Article = styled.article`
   margin: 0px auto;
 `;
 
+const P = styled.p`
+  text-align: center;
+`;
+
 export default function Home() {
   return (
-    <div
-      className="
-      dark:bg-neutral-900
-      dark:text-white
-      bg-neutral-50
-      text-black"
-    >
+    <div>
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -80,8 +78,8 @@ export default function Home() {
       <Header />
       <Main>
         <H1>Hi, I&#39;m PengPengQ!</H1>
-        <Article className="dark:text-gray-300">
-          <p className="text-center">
+        <Article>
+          <P>
             <strong>web software engineer</strong> from Chengdu, China.
             <br />
             Writing an excellent opensource project is mygoal.
@@ -90,7 +88,7 @@ export default function Home() {
             <br />
             <br />
             If you are interested in me, welcome to follow me.
-          </p>
+          </P>
         </Article>
       </Main>
 

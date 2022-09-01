@@ -44,10 +44,7 @@ const layout = (props) => {
   return(
     <Link href={`/write/posts/${id}`}>
       <Card>
-        <Article
-          className="
-            dark:bg-card-blue
-          ">
+        <Article>
           <Title>{title}</Title>
           <p>{date}</p>
         </Article>
