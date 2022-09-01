@@ -1,6 +1,28 @@
 import Head from "next/head";
+import styled from "styled-components";
 import Header from "../../../components/header";
 import { getAllPostIds, getPostData } from "../../../lib/posts";
+
+const Main = styled.main`
+  @media (min-width: 641px) {
+    min-height: 407px;
+    margin: 0px 1.5rem;
+    padding: 4rem 0;
+  }
+  @media (min-width: 976px) {
+    width: 976px;
+    min-height: 560px;
+    margin: 0px auto;
+    padding: 6rem 0;
+  }
+  @media (min-width: 1280px) {
+    min-height: 660px;
+  }
+
+  min-height: 367px;
+  margin: 0 1rem;
+  padding: 2rem 0;
+`;
 
 export default function Post({ postData }) {
   return (
@@ -15,23 +37,12 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <Header />
-      <main
-        className="
-          desktop:h-660
-          table:w-976
-          table:py-40
-          table:h-560
-          sm:py-24
-          sm:h-407
-          h-367
-          py-20
-          mx-auto"
-      >
+      <Main>
         <article>
           <h1>{postData.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
-      </main>
+      </Main>
     </div>
   );
 }

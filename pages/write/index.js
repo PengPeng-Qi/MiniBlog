@@ -2,6 +2,53 @@ import Head from "next/head";
 import Header from "../../components/header";
 import Card from "../../components/card";
 import { getSortedPostsData } from "../../lib/posts";
+import styled from "styled-components";
+
+const WriteDiv = styled.div`
+  @media (min-width: 641px) {
+    min-height: 407px;
+    margin: 0px 1.5rem;
+    padding: 4rem 0;
+  }
+  @media (min-width: 1024px) {
+    width: 976px;
+    min-height: 560px;
+    margin: 0px auto;
+    padding: 6rem 0;
+  }
+  @media (min-width: 1280px) {
+    min-height: 660px;
+  }
+
+  min-height: 367px;
+  margin: 0 1rem;
+  padding: 2rem 0;
+`;
+
+const H1 = styled.h1`
+  /* 字体发生变化，card组件也类似 */
+  @media (min-width: 768px) {
+    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  @media (min-width: 1280px) {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+
+  height: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding: 0px 1.25rem;
+`;
+
+const Main = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 export async function getStaticProps() {
   // get id, data, title item
@@ -32,39 +79,14 @@ export default function Home({ allPostsData }) {
       </Head>
       <Header />
 
-      <main
-        className="
-          desktop:min-h-660
-          table:min-h-560
-          table:w-976
-          table:py-24
-          table:mx-auto
-          sm:min-h-407
-          sm:py-16
-          min-h-367
-          mx-6
-          py-12"
-      >
-        <h1
-          className="
-            desktop:px-8
-            desktop:text-3xl
-            table:px-12
-            table:text-2.5xl
-            table:h-12
-            phone:px-4
-            phone:text-2xl
-            font-bold
-            h-10"
-        >
-          Last Content
-        </h1>
-        <main className="flex justify-around flex-wrap">
-          {allPostsData.map((PostsData) => (
+      <WriteDiv>
+        <H1>Last Content</H1>
+        <Main>
+          {allPostsData.map(PostsData => (
             <Card PostsData={PostsData} key={PostsData.id} />
           ))}
-        </main>
-      </main>
+        </Main>
+      </WriteDiv>
 
       <footer></footer>
     </div>

@@ -1,5 +1,64 @@
 import Head from "next/head";
+import styled from "styled-components";
 import Header from "../components/header";
+
+const Main = styled.main`
+  @media (max-width: 1024px) {
+    width: 100%;
+    min-height: 367px;
+    padding: 6rem 0;
+  }
+  @media (min-width: 1024px) {
+    width: 976px;
+    min-height: 560px;
+    padding: 10rem 0;
+  }
+  @media (min-width: 1280px) {
+    min-height: 660px;
+  }
+
+  margin: 0px auto;
+`;
+
+const H1 = styled.h1`
+  @media (min-width: 640px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    margin-bottom: 2.25rem;
+  }
+
+  font-size: 1.75rem;
+  font-family: Crimson Pro, serif;
+  line-height: 2.25rem;
+  text-align: center;
+  letter-spacing: 0.025em;
+  margin-bottom: 1.25rem;
+`;
+
+const Article = styled.article`
+  @media (min-width: 641px) {
+    width: 506px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  @media (min-width: 1024px) {
+    width: 590px;
+    font-size: 21px;
+    line-height: 31.496px;
+  }
+
+  width: 100%;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(31 41 55);
+  margin: 0px auto;
+`;
 
 export default function Home() {
   return (
@@ -19,48 +78,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main
-        className="
-          desktop:h-660
-          table:w-976
-          table:py-40
-          table:h-560
-          sm:py-24
-          sm:h-407
-          h-367
-          py-20
-          mx-auto"
-      >
-        <h1
-          className="
-            table:text-6xl
-            sm:text-4.5xl
-            text-3xl
-            mb-9
-            text-center
-            tracking-wide
-            font-headFont"
-        >
-          Hi, I&#39;m PengPengQ!
-        </h1>
-        <article
-          className="
-          dark:text-gray-300
-            table:text-1.1xl
-            table:w-590
-            phone:w-450
-            sm:w-506
-            sm:text-lg
-            text-base
-            w-380
-            mx-auto
-            font-sans
-            font-light
-          text-gray-800"
-        >
+      <Main>
+        <H1>Hi, I&#39;m PengPengQ!</H1>
+        <Article className="dark:text-gray-300">
           <p className="text-center">
-            <strong>web software engineer</strong> from Chengdu,
-            China.
+            <strong>web software engineer</strong> from Chengdu, China.
             <br />
             Writing an excellent opensource project is mygoal.
             <br />
@@ -69,8 +91,8 @@ export default function Home() {
             <br />
             If you are interested in me, welcome to follow me.
           </p>
-        </article>
-      </main>
+        </Article>
+      </Main>
 
       <footer></footer>
     </div>
