@@ -23,30 +23,36 @@ const Article = styled.article`
 `
 
 const Title = styled.div`
-  @media (min-width: 768px) {
-    font-size: 1.125rem;
-  }
-  @media (min-width: 1280px) {
-    font-size: 1.25rem;
-  }
   &:hover {
     color: rgb(234 88 12);
   }
 
-  font-size: 1rem;
+  font-size: 1.375rem;
   font-weight: 600;
   line-height: 1.75rem;
-  margin-bottom: 0.75rem;
+`
+
+const P = styled.p`
+  font-size: 1rem;
+  line-height: 1.725rem;
+  font-weight: 400;
+  cursor: pointer;
+`
+
+const Notice = styled(Title)`
+  font-size: 1.125rem;
+  font-weight: 500;
 `
 
 const layout = (props) => {
-  const {id, date, title} = props.PostsData;
+  const {id, data, title, description} = props.PostsData;
   return(
     <Link href={`/write/posts/${id}`}>
       <Card>
         <Article>
           <Title>{title}</Title>
-          <p>{date}</p>
+          <P>{description}</P>
+          <Notice>Read More</Notice>
         </Article>
       </Card>
     </Link>
