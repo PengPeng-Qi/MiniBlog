@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Header from "../../../components/header";
 import { getAllPostIds, getPostData } from "../../../lib/posts";
 
 const Main = styled.main`
@@ -30,7 +29,6 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <Header />
       <Main>
         <article>
           <h1>{postData.title}</h1>

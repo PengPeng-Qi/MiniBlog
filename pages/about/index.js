@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Header from "../../components/header";
 
 const Main = styled.main`
   @media (min-width: 640px) {
@@ -38,8 +37,6 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-
       <Main>
         <div className="text-center">About Me Page</div>
       </Main>

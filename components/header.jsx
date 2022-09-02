@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import ToggleMode from './toggleMode';
+import ToggleMode from './toggleMode';
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -67,7 +67,7 @@ const Logo = styled.svg`
   width: 2rem;
   height: 2rem;
   fill: transparent;
-  stroke: #1f2937;
+  stroke: ${props => props.theme.header.stroke};
   stroke-width: 14px;
 `
 
@@ -82,7 +82,9 @@ const logo = (
   </Logo>
 )
 
-const header = () => {
+const header = (props) => {
+  const {theme, setTheme} = props;
+
   const linkItemsData = [
     { url: '/' , msg: 'Home'},
     { url: '/write/' , msg: 'Writing'},
@@ -107,7 +109,7 @@ const header = () => {
         </LinkDiv>
         <LinkNav>
           {linkItems}
-          {/* <ToggleMode /> */}
+          <ToggleMode theme={theme} setTheme={setTheme} />
         </LinkNav>
       </Header>
   )

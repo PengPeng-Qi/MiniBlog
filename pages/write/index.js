@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Header from "../../components/header";
 import Card from "../../components/card";
 import { getSortedPostsData } from "../../lib/posts";
 import styled from "styled-components";
@@ -71,8 +70,6 @@ export default function Home({ allPostsData }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-
       <WriteDiv>
         <H1>Last Content</H1>
         <Main>

@@ -19,7 +19,7 @@ const Card = styled.div`
 const Article = styled.article`
   padding: 1.25rem;
   border-radius: 0.75rem;
-  background-color: rgb(250 250 250);
+  background-color: ${props => props.theme.card.backgroundColor};
 `
 
 const Title = styled.div`

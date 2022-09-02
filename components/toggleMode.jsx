@@ -1,8 +1,7 @@
-import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const Button = styled.button`
+const Div = styled.div`
   @media (max-width: 640px){
     padding-left: 0.25rem;
   }
@@ -51,36 +50,23 @@ const Sun = (
   </Svg>
 );
 
-const ThemeChanger = () => {
-  const { theme, setTheme } = useTheme();
-
-  // 获取系统是否是dark mode
-  useEffect(() => {
-    if (localStorage.getItem("theme")) {
-      setTheme(localStorage.getItem("theme"));
-    } else {
-      setTheme(
-        // prefers-color-scheme 检测用户是否有将系统的主题色设置为亮色或者暗色
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light"
-      );
-    }
-  }, []);
+const ThemeChanger = (props) => {
+  const { theme, setTheme } = props;
 
   const [svg, setSvg] = useState();
   useEffect(() => {
     theme === "dark" ? setSvg(Sun) : setSvg(Moon);
   });
 
-  const changeMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+  const toggleTheme = () => {
+    theme == "light" ? setTheme("dark") : setTheme("light");
+    localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light')
   };
 
   return (
-    <Button type="button" onClick={changeMode}>
+    <Div type="button" onClick={toggleTheme}>
       {svg}
-    </Button>
+    </Div>
   );
 };
 

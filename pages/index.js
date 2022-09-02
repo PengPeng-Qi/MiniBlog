@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import Header from "../components/header";
 
 const Main = styled.main`
   @media (max-width: 1024px) {
@@ -56,12 +55,18 @@ const Article = styled.article`
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: rgb(31 41 55);
+  color: ${props => {
+    props.theme.index.articleColor;
+  }};
   margin: 0px auto;
 `;
 
 const P = styled.p`
   text-align: center;
+`;
+
+const Strong = styled.strong`
+  font-weight: 500;
 `;
 
 export default function Home() {
@@ -75,12 +80,11 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <Main>
         <H1>Hi, I&#39;m PengPengQ!</H1>
         <Article>
           <P>
-            <strong>web software engineer</strong> from Chengdu, China.
+            <Strong>web software engineer</Strong> from Chengdu, China.
             <br />
             Writing an excellent opensource project is mygoal.
             <br />
