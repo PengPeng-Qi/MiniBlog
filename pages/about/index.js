@@ -2,33 +2,29 @@ import Head from "next/head";
 import styled from "styled-components";
 
 const Main = styled.main`
-  @media (min-width: 640px) {
-    height: 407px;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  @media (min-width: 641px) {
+    min-height: 407px;
+    margin: 0px 1.5rem;
+    padding: 4rem 0;
   }
-
   @media (min-width: 976px) {
     width: 976px;
-    height: 560px;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    min-height: 560px;
+    margin: 0px auto;
+    padding: 6rem 0;
   }
-
   @media (min-width: 1280px) {
-    height: 660px;
+    min-height: 660px;
   }
 
-  height: 367px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  min-height: 367px;
+  margin: 0 1rem;
+  padding: 2rem 0;
 `;
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>碰碰漆的博客</title>
         <meta
@@ -37,11 +33,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main>
-        <div className="text-center">About Me Page</div>
-      </Main>
-
-      <footer></footer>
-    </div>
+      <Main>About Me Page</Main>
+    </>
   );
 }
